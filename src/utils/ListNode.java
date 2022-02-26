@@ -1,10 +1,10 @@
 package utils;
 
 public class ListNode {
-    int value = 0;
-    ListNode next;
+    public int value = 0;
+    public ListNode next;
 
-    ListNode(int value) {
+    public ListNode(int value) {
         this.value = value;
     }
 
@@ -14,7 +14,7 @@ public class ListNode {
     }
 
     // Function to insert node
-    static ListNode insert(ListNode root, int item) {
+    public static ListNode insert(ListNode root, int item) {
         ListNode temp = new ListNode(item, null);
         ListNode ptr;
 
@@ -29,14 +29,15 @@ public class ListNode {
         return root;
     }
 
-    static void display(ListNode root) {
+    public static void display(ListNode root) {
         while (root != null) {
             System.out.print(root.value + " ");
             root = root.next;
         }
+        System.out.println(" ");
     }
 
-    static ListNode arrayToList(int arr[], int n) {
+    public static ListNode arrayToList(int arr[], int n) {
         ListNode root = null;
         for (int i = 0; i < n; i++)
             root = insert(root, arr[i]);
